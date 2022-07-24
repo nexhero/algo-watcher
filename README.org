@@ -1,0 +1,6 @@
+#+title: algo-watcher
+
+PIP support coming...
+Missing documentation.
+
+Check test.py

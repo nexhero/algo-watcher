@@ -1,15 +1,16 @@
 from collections import deque, Counter
 import threading
 import logging
+
 class Q:
-    """"""
+    caller :str
+    """The address who make the oracle call"""
+    invoke :str
+    """The callback function."""
+    metadata : dict
+    """Argument passed to the invoke function."""
     def __init__(self,caller,invoke, metadata = None):
-        """
-        Parameters
-        caller: String the sender address
-        metadata: String the note message
-        invoke: The callback function
-        """
+        """Create a new action request."""
         self.caller = caller
         self.metadata = metadata
         self.invoke = invoke
@@ -23,13 +24,17 @@ class Q:
         t.start()
 
 class Queue:
-    """"""
+    threads : int
+    """Max action running at the same time."""
+    actions : dict
+    """Pre-defined function based key-index dictionary"""
     def __init__(self,actions,threads = 1):
+        """Create a FIFO actions request manager."""
         self.threads = threads  # Max actions running at the same time.
         self.actions = actions
         self.que = deque()
     def enqueue(self,sender,action_index,data = None):
-        """Add action to run """
+        """Add action ready to be callable."""
         # TODO: Add loggin support
         action_exe = self.actions.get(action_index)
         if(action_exe != None):
@@ -39,9 +44,7 @@ class Queue:
             logging.warning('%s Trying to call: %s, action do not exist!',sender,action_index)
 
     def dequeue(self):
-        """Execute the first action """
-        # TODO: Add loggin support
-        # print("Currect active threads: " + str(threading.active_count()-1) + "of " + str(self.threads))
+        """Call the next action available."""
         if(len(self.que) > 0):
             if threading.active_count()-1 < int(self.threads):
                 action = self.que.popleft()

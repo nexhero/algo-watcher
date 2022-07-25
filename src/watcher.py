@@ -1,3 +1,14 @@
+"""
+Algo Watcher use note field from payment transaction as Json request to run actions offchain on Algorand.\n
+example for a note using Json: \n
+`{
+  "app": "test1",
+  "action": "hello",
+  "data": {
+    "name": "Wattson",
+  }
+}`
+"""
 from algosdk.v2client.indexer import IndexerClient
 import json
 import base64
@@ -5,17 +16,31 @@ from .queue import Q, Queue
 import time
 import logging
 import sys
+
+
 class watcher:
-    """Check every block"""
+    algo_toke :str
+    """ Algorand Indexer token."""
+    algo_addr :str
+    """Algorand Indexer host address."""
+    app :str
+    """Unique app name that watcher reconize."""
+    actions : dict
+    """Store functions based on keys indexes that serves as callbacks."""
+    oracle_addr : str
+    """The payment transaction reciever."""
+    threads : int
+    """Total actions that `algo-watcher` can run at the same time."""
+    at_round : int
+    """Initial round that watcher start seek for oracle call."""
+    to_round : int
+    """
+    If this parameter is not defined, the oracle app will seek for every new round generated.
+    Otherwise it will end the program to the round defined.
+    """
+
     def __init__(self,algo_token, algo_addr, app,actions,oracle_addr,threads = 1, at_round = 1, to_round = None):
-        """
-        Paremeters:
-        algo_token: String the algorand node token.
-        algo_addr: String the url for the algorand node.
-        app: String specifies the word that the watcher will look at for to execute the actions.
-        addr: The oracle address
-        threads: Int How many process can run at the same time, default 1.
-        """
+        """Make a watcher client object."""
         self.algo_token = algo_token
         self.algo_addr = algo_addr
         self.app = app
@@ -43,6 +68,7 @@ class watcher:
         self.indexer = IndexerClient(self.algo_token, self.algo_addr,headers)
 
     def loop(self):
+        """Run time that check every block until reconize oracle call and actions"""
         loop_on = True
         while loop_on:
             if self.to_round == None or self._round <= self.to_round:
@@ -54,8 +80,7 @@ class watcher:
 
 
     def __serialize(self,response):
-        """"""
-        # TODO: Add loggin support
+        """private function"""
         for txn in response['transactions']:
             pay_transaction = txn.get("payment-transaction")
             txn_id = txn['id']

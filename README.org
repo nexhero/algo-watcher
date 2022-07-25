@@ -1,6 +1,10 @@
 #+title: algo-watcher
 
-PIP support coming...
-Missing documentation.
-
-Check test.py
+* Documentation:
+[https://nexhero.github.io/algo-watcher/index.html]
+* Installation:
+Working on it.
+* Example.
+#+begin_src shell
+python example.py
+#+end_src

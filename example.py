@@ -1,3 +1,4 @@
+#!/bin/python3
 """
 Small example for the Algo Watcher client \n
 It will check between two round seeking for `test1` oracle app
@@ -36,25 +37,29 @@ def hello(data = None):
         logging.info("Bye %s", name)
     else:
         logging.error("No data args")
+
+
 def add(data):
     "Callback function for the action add"
     n1 = data['n1']
     n2 = data['n2']
     logging.info("Called add() | Return:%s",str(n1+n2))
 
+
 actions = {
     'hello':hello,
     'add':add
 }
 
-w = watcher(
-    algo_token = token,
-    algo_addr = addr,
-    app = app,
-    actions = actions,
-    oracle_addr = oracle,
-    threads = 2,
-    at_round = f_round,
-    to_round =  t_round +1
-)
-w.loop()
+if __name__ =="__main__":
+    w = watcher(
+        algo_token = token,
+        algo_addr = addr,
+        app = app,
+        actions = actions,
+        oracle_addr = oracle,
+        threads = 2,
+        at_round = f_round,
+        to_round =  t_round +1
+    )
+    w.loop()

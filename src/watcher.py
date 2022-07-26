@@ -13,6 +13,7 @@ from algosdk.v2client.indexer import IndexerClient
 import json
 import base64
 from .queue import Q, Queue
+from .anrequest import AnRequest as R
 import time
 import logging
 import sys
@@ -105,7 +106,7 @@ class watcher:
                             logging.error('Transaction: %s Sender: %s | No action found!',txn_id,sender)
                             return 0
                         else:
-                            self.queue.enqueue(sender,action,data)
+                            self.queue.enqueue(R(txn_id,sender,metadata))
             # else:
                 # print("No transaction found on round: " + str(self._round))
 

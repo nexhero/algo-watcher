@@ -1,26 +1,20 @@
 from collections import deque, Counter
 import threading
+from .anrequest import AnRequest
 import logging
 
 class Q:
-    caller :str
+    r : AnRequest
     """The address who make the oracle call"""
-    invoke :str
-    """The callback function."""
-    metadata : dict
-    """Argument passed to the invoke function."""
-    def __init__(self,caller,invoke, metadata = None):
+
+    def __init__(self,invoke,r):
         """Create a new action request."""
-        self.caller = caller
-        self.metadata = metadata
         self.invoke = invoke
+        self.r = r
 
 
     def call(self):
-        if(self.metadata != None):
-            t = threading.Thread(target = self.invoke, args=(self.metadata,))
-        else:
-            t = threading.Thread(target = self.invoke)
+        t = threading.Thread(target = self.invoke, args=(self.r,))
         t.start()
 
 class Queue:
@@ -33,15 +27,17 @@ class Queue:
         self.threads = threads  # Max actions running at the same time.
         self.actions = actions
         self.que = deque()
-    def enqueue(self,sender,action_index,data = None):
+
+
+    def enqueue(self,request):
         """Add action ready to be callable."""
-        # TODO: Add loggin support
-        action_exe = self.actions.get(action_index)
+
+        action_exe = self.actions.get(request.getAction())
         if(action_exe != None):
-            logging.info('Sender: %s call: %s',sender,action_index)
-            self.que.append(Q(sender,action_exe,data))
+            logging.info('Sender: %s call: %s',request.getSender(),request.getAction())
+            self.que.append(Q(action_exe,request))
         else:
-            logging.warning('%s Trying to call: %s, action do not exist!',sender,action_index)
+            logging.warning('%s Trying to call: %s, action do not exist!',request.getSender(),request.getAction())
 
     def dequeue(self):
         """Call the next action available."""

@@ -27,8 +27,9 @@ t_round = 23035735
 actions : dict
 """Define actions"""
 
-def hello(data = None):
+def hello(r = None):
     """Callback function for the action hello"""
+    data = r.getData()
     if( data  != None ):
         name = data['name']
         sleep_for = data['sleep']
@@ -39,8 +40,9 @@ def hello(data = None):
         logging.error("No data args")
 
 
-def add(data):
+def add(r):
     "Callback function for the action add"
+    data = r.getData()
     n1 = data['n1']
     n2 = data['n2']
     logging.info("Called add() | Return:%s",str(n1+n2))

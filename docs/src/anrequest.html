@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="pdoc 12.0.2"/>
-    <title>example API documentation</title>
+    <title>src.anrequest API documentation</title>
 
     <style>/*! * Bootstrap Reboot v5.0.0 (https://getbootstrap.com/) * Copyright 2011-2021 The Bootstrap Authors * Copyright 2011-2021 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE) * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md) */*,::after,::before{box-sizing:border-box}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;background-color:#fff;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}hr{margin:1rem 0;color:inherit;background-color:currentColor;border:0;opacity:.25}hr:not([size]){height:1px}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2}h1{font-size:calc(1.375rem + 1.5vw)}@media (min-width:1200px){h1{font-size:2.5rem}}h2{font-size:calc(1.325rem + .9vw)}@media (min-width:1200px){h2{font-size:2rem}}h3{font-size:calc(1.3rem + .6vw)}@media (min-width:1200px){h3{font-size:1.75rem}}h4{font-size:calc(1.275rem + .3vw)}@media (min-width:1200px){h4{font-size:1.5rem}}h5{font-size:1.25rem}h6{font-size:1rem}p{margin-top:0;margin-bottom:1rem}abbr[data-bs-original-title],abbr[title]{-webkit-text-decoration:underline dotted;text-decoration:underline dotted;cursor:help;-webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none}address{margin-bottom:1rem;font-style:normal;line-height:inherit}ol,ul{padding-left:2rem}dl,ol,ul{margin-top:0;margin-bottom:1rem}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}blockquote{margin:0 0 1rem}b,strong{font-weight:bolder}small{font-size:.875em}mark{padding:.2em;background-color:#fcf8e3}sub,sup{position:relative;font-size:.75em;line-height:0;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}a{color:#0d6efd;text-decoration:underline}a:hover{color:#0a58ca}a:not([href]):not([class]),a:not([href]):not([class]):hover{color:inherit;text-decoration:none}code,kbd,pre,samp{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em;direction:ltr;unicode-bidi:bidi-override}pre{display:block;margin-top:0;margin-bottom:1rem;overflow:auto;font-size:.875em}pre code{font-size:inherit;color:inherit;word-break:normal}code{font-size:.875em;color:#d63384;word-wrap:break-word}a>code{color:inherit}kbd{padding:.2rem .4rem;font-size:.875em;color:#fff;background-color:#212529;border-radius:.2rem}kbd kbd{padding:0;font-size:1em;font-weight:700}figure{margin:0 0 1rem}img,svg{vertical-align:middle}table{caption-side:bottom;border-collapse:collapse}caption{padding-top:.5rem;padding-bottom:.5rem;color:#6c757d;text-align:left}th{text-align:inherit;text-align:-webkit-match-parent}tbody,td,tfoot,th,thead,tr{border-color:inherit;border-style:solid;border-width:0}label{display:inline-block}button{border-radius:0}button:focus:not(:focus-visible){outline:0}button,input,optgroup,select,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,select{text-transform:none}[role=button]{cursor:pointer}select{word-wrap:normal}select:disabled{opacity:1}[list]::-webkit-calendar-picker-indicator{display:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]:not(:disabled),[type=reset]:not(:disabled),[type=submit]:not(:disabled),button:not(:disabled){cursor:pointer}::-moz-focus-inner{padding:0;border-style:none}textarea{resize:vertical}fieldset{min-width:0;padding:0;margin:0;border:0}legend{float:left;width:100%;padding:0;margin-bottom:.5rem;font-size:calc(1.275rem + .3vw);line-height:inherit}@media (min-width:1200px){legend{font-size:1.5rem}}legend+*{clear:left}::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-text,::-webkit-datetime-edit-year-field{padding:0}::-webkit-inner-spin-button{height:auto}[type=search]{outline-offset:-2px;-webkit-appearance:textfield}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-color-swatch-wrapper{padding:0}::file-selector-button{font:inherit}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}output{display:inline-block}iframe{border:0}summary{display:list-item;cursor:pointer}progress{vertical-align:baseline}[hidden]{display:none!important}</style>
     <style>/*! syntax-highlighting.css */pre{line-height:125%;}span.linenos{color:inherit; background-color:transparent; padding-left:5px; padding-right:20px;}.pdoc-code .hll{background-color:#ffffcc}.pdoc-code{background:#f8f8f8;}.pdoc-code .c{color:#3D7B7B; font-style:italic}.pdoc-code .err{border:1px solid #FF0000}.pdoc-code .k{color:#008000; font-weight:bold}.pdoc-code .o{color:#666666}.pdoc-code .ch{color:#3D7B7B; font-style:italic}.pdoc-code .cm{color:#3D7B7B; font-style:italic}.pdoc-code .cp{color:#9C6500}.pdoc-code .cpf{color:#3D7B7B; font-style:italic}.pdoc-code .c1{color:#3D7B7B; font-style:italic}.pdoc-code .cs{color:#3D7B7B; font-style:italic}.pdoc-code .gd{color:#A00000}.pdoc-code .ge{font-style:italic}.pdoc-code .gr{color:#E40000}.pdoc-code .gh{color:#000080; font-weight:bold}.pdoc-code .gi{color:#008400}.pdoc-code .go{color:#717171}.pdoc-code .gp{color:#000080; font-weight:bold}.pdoc-code .gs{font-weight:bold}.pdoc-code .gu{color:#800080; font-weight:bold}.pdoc-code .gt{color:#0044DD}.pdoc-code .kc{color:#008000; font-weight:bold}.pdoc-code .kd{color:#008000; font-weight:bold}.pdoc-code .kn{color:#008000; font-weight:bold}.pdoc-code .kp{color:#008000}.pdoc-code .kr{color:#008000; font-weight:bold}.pdoc-code .kt{color:#B00040}.pdoc-code .m{color:#666666}.pdoc-code .s{color:#BA2121}.pdoc-code .na{color:#687822}.pdoc-code .nb{color:#008000}.pdoc-code .nc{color:#0000FF; font-weight:bold}.pdoc-code .no{color:#880000}.pdoc-code .nd{color:#AA22FF}.pdoc-code .ni{color:#717171; font-weight:bold}.pdoc-code .ne{color:#CB3F38; font-weight:bold}.pdoc-code .nf{color:#0000FF}.pdoc-code .nl{color:#767600}.pdoc-code .nn{color:#0000FF; font-weight:bold}.pdoc-code .nt{color:#008000; font-weight:bold}.pdoc-code .nv{color:#19177C}.pdoc-code .ow{color:#AA22FF; font-weight:bold}.pdoc-code .w{color:#bbbbbb}.pdoc-code .mb{color:#666666}.pdoc-code .mf{color:#666666}.pdoc-code .mh{color:#666666}.pdoc-code .mi{color:#666666}.pdoc-code .mo{color:#666666}.pdoc-code .sa{color:#BA2121}.pdoc-code .sb{color:#BA2121}.pdoc-code .sc{color:#BA2121}.pdoc-code .dl{color:#BA2121}.pdoc-code .sd{color:#BA2121; font-style:italic}.pdoc-code .s2{color:#BA2121}.pdoc-code .se{color:#AA5D1F; font-weight:bold}.pdoc-code .sh{color:#BA2121}.pdoc-code .si{color:#A45A77; font-weight:bold}.pdoc-code .sx{color:#008000}.pdoc-code .sr{color:#A45A77}.pdoc-code .s1{color:#BA2121}.pdoc-code .ss{color:#19177C}.pdoc-code .bp{color:#008000}.pdoc-code .fm{color:#0000FF}.pdoc-code .vc{color:#19177C}.pdoc-code .vg{color:#19177C}.pdoc-code .vi{color:#19177C}.pdoc-code .vm{color:#19177C}.pdoc-code .il{color:#666666}</style>
@@ -16,7 +16,7 @@
     <nav class="pdoc">
         <label id="navtoggle" for="togglestate" class="pdoc-button"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke-linecap='round' stroke="currentColor" stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg></label>
         <input id="togglestate" type="checkbox" aria-hidden="true" tabindex="-1">
-        <div>            <a class="pdoc-button module-list-button" href="index.html">
+        <div>            <a class="pdoc-button module-list-button" href="../index.html">
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z"/>
   <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
@@ -33,22 +33,43 @@
         <h2>API Documentation</h2>
             <ul class="memberlist">
             <li>
-                    <a class="variable" href="#algod_addr">algod_addr</a>
-            </li>
-            <li>
-                    <a class="variable" href="#oracle">oracle</a>
-            </li>
-            <li>
-                    <a class="variable" href="#f_round">f_round</a>
-            </li>
-            <li>
-                    <a class="variable" href="#actions">actions</a>
-            </li>
-            <li>
-                    <a class="function" href="#hello">hello</a>
-            </li>
-            <li>
-                    <a class="function" href="#add">add</a>
+                    <a class="class" href="#AnRequest">AnRequest</a>
+                            <ul class="memberlist">
+                        <li>
+                                <a class="function" href="#AnRequest.__init__">AnRequest</a>
+                        </li>
+                        <li>
+                                <a class="variable" href="#AnRequest.am">am</a>
+                        </li>
+                        <li>
+                                <a class="variable" href="#AnRequest.txn">txn</a>
+                        </li>
+                        <li>
+                                <a class="variable" href="#AnRequest.sender">sender</a>
+                        </li>
+                        <li>
+                                <a class="variable" href="#AnRequest.body">body</a>
+                        </li>
+                        <li>
+                                <a class="function" href="#AnRequest.getManager">getManager</a>
+                        </li>
+                        <li>
+                                <a class="function" href="#AnRequest.getTxn">getTxn</a>
+                        </li>
+                        <li>
+                                <a class="function" href="#AnRequest.getSender">getSender</a>
+                        </li>
+                        <li>
+                                <a class="function" href="#AnRequest.getAppId">getAppId</a>
+                        </li>
+                        <li>
+                                <a class="function" href="#AnRequest.getAction">getAction</a>
+                        </li>
+                        <li>
+                                <a class="function" href="#AnRequest.getData">getData</a>
+                        </li>
+                </ul>
+
             </li>
     </ul>
 
@@ -64,208 +85,320 @@
     <main class="pdoc">
             <section class="module-info">
                     <h1 class="modulename">
-example    </h1>
+src<wbr>.anrequest    </h1>
 
-                        <div class="docstring"><p>Small example for the Algo Watcher client </p>
+                
+                        <input id="anrequest-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 
-<p>It will check between two round seeking for <code>test1</code> oracle app
-and execute <code><a href="#hello">hello()</a></code> and <code><a href="#add">add()</a></code> function. </p>
+                        <label class="view-source-button" for="anrequest-view-source"><span>View Source</span></label>
 
-<p>Example transaction: <a href="https://testnet.algoexplorer.io/tx/RDXTSMGDP4Q4BJ2NVPOPOEQ6OXZ4NTLCNX7PX6MVYC6THMIX7YJQ">https://testnet.algoexplorer.io/tx/RDXTSMGDP4Q4BJ2NVPOPOEQ6OXZ4NTLCNX7PX6MVYC6THMIX7YJQ</a></p>
-</div>
-
-                        <input id="example-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-
-                        <label class="view-source-button" for="example-view-source"><span>View Source</span></label>
-
-                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="ch">#!/bin/python3</span>
-</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a><span class="sd">&quot;&quot;&quot;</span>
-</span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a><span class="sd">Small example for the Algo Watcher client \n</span>
-</span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a><span class="sd">It will check between two round seeking for `test1` oracle app</span>
-</span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a><span class="sd">and execute `hello()` and `add()` function. \n</span>
-</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a><span class="sd">Example transaction: \</span>
-</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a><span class="sd">https://testnet.algoexplorer.io/tx/RDXTSMGDP4Q4BJ2NVPOPOEQ6OXZ4NTLCNX7PX6MVYC6THMIX7YJQ</span>
-</span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a><span class="sd">&quot;&quot;&quot;</span>
-</span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a><span class="kn">from</span> <span class="nn">src</span> <span class="kn">import</span> <span class="n">watcher</span>
-</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a><span class="kn">import</span> <span class="nn">logging</span>
-</span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a><span class="kn">import</span> <span class="nn">time</span>
-</span><span id="L-12"><a href="#L-12"><span class="linenos">12</span></a>
-</span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a><span class="sd">&quot;&quot;&quot;</span>
-</span><span id="L-14"><a href="#L-14"><span class="linenos">14</span></a><span class="sd">Purestake secret sauce\n</span>
-</span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a><span class="sd">https://developer.purestake.io/home</span>
-</span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a><span class="sd">&quot;&quot;&quot;</span>
-</span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a><span class="n">token</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="c1"># Add purestake secret token</span>
-</span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a><span class="n">index_addr</span> <span class="o">=</span> <span class="s2">&quot;https://testnet-algorand.api.purestake.io/idx2&quot;</span>
-</span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a><span class="n">algod_addr</span> <span class="o">=</span> <span class="s2">&quot;https://testnet-algorand.api.purestake.io/ps2&quot;</span>
-</span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a><span class="sd">&quot;&quot;&quot;Indexer host&quot;&quot;&quot;</span>
-</span><span id="L-21"><a href="#L-21"><span class="linenos">21</span></a><span class="n">app</span> <span class="o">=</span> <span class="s2">&quot;test1&quot;</span>
-</span><span id="L-22"><a href="#L-22"><span class="linenos">22</span></a>
-</span><span id="L-23"><a href="#L-23"><span class="linenos">23</span></a><span class="n">oracle</span> <span class="o">=</span><span class="s2">&quot;&quot;</span>
-</span><span id="L-24"><a href="#L-24"><span class="linenos">24</span></a>
+                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="k">class</span> <span class="nc">AnRequest</span><span class="p">:</span>
+</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a>    <span class="sd">&quot;&quot;&quot;Define a basic Algorand Note Request&quot;&quot;&quot;</span>
+</span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a>
+</span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a>    <span class="n">am</span> <span class="p">:</span> <span class="nb">object</span>
+</span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a>    <span class="sd">&quot;&quot;&quot;The  algonode.Manager object&quot;&quot;&quot;</span>
+</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a>    <span class="n">txn</span> <span class="p">:</span><span class="nb">str</span>
+</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a>    <span class="sd">&quot;&quot;&quot;Transacction id where the action was called&quot;&quot;&quot;</span>
+</span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a>    <span class="n">sender</span> <span class="p">:</span><span class="nb">str</span>
+</span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a>    <span class="sd">&quot;&quot;&quot;User who make the request to the oracle&quot;&quot;&quot;</span>
+</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a>    <span class="n">body</span> <span class="p">:</span><span class="nb">dict</span>
+</span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a>    <span class="sd">&quot;&quot;&quot;Note Request content&quot;&quot;&quot;</span>
+</span><span id="L-12"><a href="#L-12"><span class="linenos">12</span></a>    <span class="c1"># TODO: rewrite documentation</span>
+</span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">am</span><span class="p">,</span><span class="n">txn</span><span class="p">,</span><span class="n">sender</span><span class="p">,</span><span class="n">body</span><span class="p">):</span>
+</span><span id="L-14"><a href="#L-14"><span class="linenos">14</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">txn</span> <span class="o">=</span> <span class="n">txn</span>
+</span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">sender</span> <span class="o">=</span> <span class="n">sender</span>
+</span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">body</span> <span class="o">=</span> <span class="n">body</span>
+</span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">am</span> <span class="o">=</span> <span class="n">am</span>
+</span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a>
+</span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a>    <span class="k">def</span> <span class="nf">getManager</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a>        <span class="sd">&quot;&quot;&quot;Return the node manager object, this enable to use algod and indexer clients into each action function&quot;&quot;&quot;</span>
+</span><span id="L-21"><a href="#L-21"><span class="linenos">21</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">am</span>
+</span><span id="L-22"><a href="#L-22"><span class="linenos">22</span></a>    <span class="k">def</span> <span class="nf">getTxn</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="L-23"><a href="#L-23"><span class="linenos">23</span></a>        <span class="sd">&quot;&quot;&quot;Return the transaction id&quot;&quot;&quot;</span>
+</span><span id="L-24"><a href="#L-24"><span class="linenos">24</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">txn</span>
 </span><span id="L-25"><a href="#L-25"><span class="linenos">25</span></a>
-</span><span id="L-26"><a href="#L-26"><span class="linenos">26</span></a><span class="sd">&quot;&quot;&quot;Initial round&quot;&quot;&quot;</span>
-</span><span id="L-27"><a href="#L-27"><span class="linenos">27</span></a><span class="n">f_round</span> <span class="o">=</span> <span class="mi">23035719</span>
-</span><span id="L-28"><a href="#L-28"><span class="linenos">28</span></a><span class="sd">&quot;&quot;&quot;Stop seek for oracle call at this block&quot;&quot;&quot;</span>
-</span><span id="L-29"><a href="#L-29"><span class="linenos">29</span></a><span class="n">t_round</span> <span class="o">=</span> <span class="mi">23035735</span>
-</span><span id="L-30"><a href="#L-30"><span class="linenos">30</span></a><span class="n">actions</span> <span class="p">:</span> <span class="nb">dict</span>
-</span><span id="L-31"><a href="#L-31"><span class="linenos">31</span></a><span class="sd">&quot;&quot;&quot;Define actions&quot;&quot;&quot;</span>
-</span><span id="L-32"><a href="#L-32"><span class="linenos">32</span></a>
-</span><span id="L-33"><a href="#L-33"><span class="linenos">33</span></a><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">r</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-</span><span id="L-34"><a href="#L-34"><span class="linenos">34</span></a>    <span class="sd">&quot;&quot;&quot;Callback function for the action hello&quot;&quot;&quot;</span>
-</span><span id="L-35"><a href="#L-35"><span class="linenos">35</span></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">getData</span><span class="p">()</span>
-</span><span id="L-36"><a href="#L-36"><span class="linenos">36</span></a>    <span class="n">manager</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">getManager</span><span class="p">()</span>
-</span><span id="L-37"><a href="#L-37"><span class="linenos">37</span></a>    <span class="k">if</span><span class="p">(</span> <span class="n">data</span>  <span class="o">!=</span> <span class="kc">None</span> <span class="p">):</span>
-</span><span id="L-38"><a href="#L-38"><span class="linenos">38</span></a>        <span class="n">name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
-</span><span id="L-39"><a href="#L-39"><span class="linenos">39</span></a>        <span class="n">sleep_for</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;sleep&#39;</span><span class="p">]</span>
-</span><span id="L-40"><a href="#L-40"><span class="linenos">40</span></a>        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Hello </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">name</span><span class="p">)</span>
-</span><span id="L-41"><a href="#L-41"><span class="linenos">41</span></a>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleep_for</span><span class="o">+</span><span class="mf">17.2</span><span class="p">)</span>
-</span><span id="L-42"><a href="#L-42"><span class="linenos">42</span></a>        <span class="n">manager</span><span class="o">.</span><span class="n">makePayment</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">getSender</span><span class="p">(),</span><span class="mi">1000</span><span class="p">,</span><span class="n">note</span><span class="o">=</span><span class="s2">&quot;pay back!&quot;</span><span class="p">)</span>
-</span><span id="L-43"><a href="#L-43"><span class="linenos">43</span></a>        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Bye </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-</span><span id="L-44"><a href="#L-44"><span class="linenos">44</span></a>    <span class="k">else</span><span class="p">:</span>
-</span><span id="L-45"><a href="#L-45"><span class="linenos">45</span></a>        <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;No data args&quot;</span><span class="p">)</span>
-</span><span id="L-46"><a href="#L-46"><span class="linenos">46</span></a>
-</span><span id="L-47"><a href="#L-47"><span class="linenos">47</span></a>
-</span><span id="L-48"><a href="#L-48"><span class="linenos">48</span></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
-</span><span id="L-49"><a href="#L-49"><span class="linenos">49</span></a>    <span class="s2">&quot;Callback function for the action add&quot;</span>
-</span><span id="L-50"><a href="#L-50"><span class="linenos">50</span></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">getData</span><span class="p">()</span>
-</span><span id="L-51"><a href="#L-51"><span class="linenos">51</span></a>    <span class="n">manager</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">getManager</span><span class="p">()</span>
-</span><span id="L-52"><a href="#L-52"><span class="linenos">52</span></a>    <span class="n">n1</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;n1&#39;</span><span class="p">]</span>
-</span><span id="L-53"><a href="#L-53"><span class="linenos">53</span></a>    <span class="n">n2</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;n2&#39;</span><span class="p">]</span>
-</span><span id="L-54"><a href="#L-54"><span class="linenos">54</span></a>    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Called add() | Return:</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="n">n2</span><span class="p">))</span>
-</span><span id="L-55"><a href="#L-55"><span class="linenos">55</span></a>
-</span><span id="L-56"><a href="#L-56"><span class="linenos">56</span></a>
-</span><span id="L-57"><a href="#L-57"><span class="linenos">57</span></a><span class="n">actions</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="L-58"><a href="#L-58"><span class="linenos">58</span></a>    <span class="s1">&#39;hello&#39;</span><span class="p">:</span><span class="n">hello</span><span class="p">,</span>
-</span><span id="L-59"><a href="#L-59"><span class="linenos">59</span></a>    <span class="s1">&#39;add&#39;</span><span class="p">:</span><span class="n">add</span>
-</span><span id="L-60"><a href="#L-60"><span class="linenos">60</span></a><span class="p">}</span>
-</span><span id="L-61"><a href="#L-61"><span class="linenos">61</span></a>
-</span><span id="L-62"><a href="#L-62"><span class="linenos">62</span></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span><span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-</span><span id="L-63"><a href="#L-63"><span class="linenos">63</span></a>    <span class="n">w</span> <span class="o">=</span> <span class="n">watcher</span><span class="p">(</span>
-</span><span id="L-64"><a href="#L-64"><span class="linenos">64</span></a>        <span class="n">algo_token</span> <span class="o">=</span> <span class="n">token</span><span class="p">,</span>
-</span><span id="L-65"><a href="#L-65"><span class="linenos">65</span></a>        <span class="n">algod_addr</span> <span class="o">=</span> <span class="n">algod_addr</span><span class="p">,</span>
-</span><span id="L-66"><a href="#L-66"><span class="linenos">66</span></a>        <span class="n">index_addr</span> <span class="o">=</span> <span class="n">index_addr</span><span class="p">,</span>
-</span><span id="L-67"><a href="#L-67"><span class="linenos">67</span></a>        <span class="n">app_name</span> <span class="o">=</span> <span class="n">app</span><span class="p">,</span>
-</span><span id="L-68"><a href="#L-68"><span class="linenos">68</span></a>        <span class="n">actions</span> <span class="o">=</span> <span class="n">actions</span><span class="p">,</span>
-</span><span id="L-69"><a href="#L-69"><span class="linenos">69</span></a>        <span class="n">oracle</span> <span class="o">=</span> <span class="n">oracle</span><span class="p">,</span>
-</span><span id="L-70"><a href="#L-70"><span class="linenos">70</span></a>        <span class="n">rps</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
-</span><span id="L-71"><a href="#L-71"><span class="linenos">71</span></a>        <span class="n">threads</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
-</span><span id="L-72"><a href="#L-72"><span class="linenos">72</span></a>        <span class="n">at_round</span> <span class="o">=</span> <span class="n">f_round</span><span class="p">,</span>
-</span><span id="L-73"><a href="#L-73"><span class="linenos">73</span></a>        <span class="n">to_round</span> <span class="o">=</span>  <span class="n">t_round</span> <span class="o">+</span><span class="mi">1</span>
-</span><span id="L-74"><a href="#L-74"><span class="linenos">74</span></a>    <span class="p">)</span>
-</span><span id="L-75"><a href="#L-75"><span class="linenos">75</span></a>    <span class="n">w</span><span class="o">.</span><span class="n">loop</span><span class="p">()</span>
+</span><span id="L-26"><a href="#L-26"><span class="linenos">26</span></a>    <span class="k">def</span> <span class="nf">getSender</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="L-27"><a href="#L-27"><span class="linenos">27</span></a>        <span class="sd">&quot;&quot;&quot;Return the sender address&quot;&quot;&quot;</span>
+</span><span id="L-28"><a href="#L-28"><span class="linenos">28</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sender</span>
+</span><span id="L-29"><a href="#L-29"><span class="linenos">29</span></a>
+</span><span id="L-30"><a href="#L-30"><span class="linenos">30</span></a>    <span class="k">def</span> <span class="nf">getAppId</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="L-31"><a href="#L-31"><span class="linenos">31</span></a>        <span class="sd">&quot;&quot;&quot;Get the oracle app id&quot;&quot;&quot;</span>
+</span><span id="L-32"><a href="#L-32"><span class="linenos">32</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="s1">&#39;app&#39;</span><span class="p">]</span>
+</span><span id="L-33"><a href="#L-33"><span class="linenos">33</span></a>
+</span><span id="L-34"><a href="#L-34"><span class="linenos">34</span></a>    <span class="k">def</span> <span class="nf">getAction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="L-35"><a href="#L-35"><span class="linenos">35</span></a>        <span class="sd">&quot;&quot;&quot;Get the Action name for the request&quot;&quot;&quot;</span>
+</span><span id="L-36"><a href="#L-36"><span class="linenos">36</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="s1">&#39;action&#39;</span><span class="p">]</span>
+</span><span id="L-37"><a href="#L-37"><span class="linenos">37</span></a>
+</span><span id="L-38"><a href="#L-38"><span class="linenos">38</span></a>    <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="L-39"><a href="#L-39"><span class="linenos">39</span></a>        <span class="sd">&quot;&quot;&quot;Get the data passed to the function&quot;&quot;&quot;</span>
+</span><span id="L-40"><a href="#L-40"><span class="linenos">40</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
 </span></pre></div>
 
 
             </section>
-                <section id="algod_addr">
-                    <div class="attr variable">
-            <span class="name">algod_addr</span><span class="default_value"> = &#39;https://testnet-algorand.api.purestake.io/ps2&#39;</span>
-
-        
-    </div>
-    <a class="headerlink" href="#algod_addr"></a>
-    
-            <div class="docstring"><p>Indexer host</p>
-</div>
-
-
-                </section>
-                <section id="oracle">
-                    <div class="attr variable">
-            <span class="name">oracle</span><span class="default_value"> = &#39;&#39;</span>
-
-        
-    </div>
-    <a class="headerlink" href="#oracle"></a>
-    
-            <div class="docstring"><p>Initial round</p>
-</div>
-
-
-                </section>
-                <section id="f_round">
-                    <div class="attr variable">
-            <span class="name">f_round</span><span class="default_value"> = 23035719</span>
-
-        
-    </div>
-    <a class="headerlink" href="#f_round"></a>
-    
-            <div class="docstring"><p>Stop seek for oracle call at this block</p>
-</div>
-
-
-                </section>
-                <section id="actions">
-                    <div class="attr variable">
-            <span class="name">actions</span><span class="annotation">: dict</span><span class="default_value"> = {&#39;hello&#39;: &lt;function hello&gt;, &#39;add&#39;: &lt;function add&gt;}</span>
-
-        
-    </div>
-    <a class="headerlink" href="#actions"></a>
-    
-            <div class="docstring"><p>Define actions</p>
-</div>
-
-
-                </section>
-                <section id="hello">
-                            <input id="hello-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-<div class="attr function">
+                <section id="AnRequest">
+                            <input id="AnRequest-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+<div class="attr class">
             
-        <span class="def">def</span>
-        <span class="name">hello</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">r</span><span class="o">=</span><span class="kc">None</span></span>)</span>
+    <span class="def">class</span>
+    <span class="name">AnRequest</span>:
 
-                <label class="view-source-button" for="hello-view-source"><span>View Source</span></label>
+                <label class="view-source-button" for="AnRequest-view-source"><span>View Source</span></label>
 
     </div>
-    <a class="headerlink" href="#hello"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="hello-34"><a href="#hello-34"><span class="linenos">34</span></a><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">r</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-</span><span id="hello-35"><a href="#hello-35"><span class="linenos">35</span></a>    <span class="sd">&quot;&quot;&quot;Callback function for the action hello&quot;&quot;&quot;</span>
-</span><span id="hello-36"><a href="#hello-36"><span class="linenos">36</span></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">getData</span><span class="p">()</span>
-</span><span id="hello-37"><a href="#hello-37"><span class="linenos">37</span></a>    <span class="n">manager</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">getManager</span><span class="p">()</span>
-</span><span id="hello-38"><a href="#hello-38"><span class="linenos">38</span></a>    <span class="k">if</span><span class="p">(</span> <span class="n">data</span>  <span class="o">!=</span> <span class="kc">None</span> <span class="p">):</span>
-</span><span id="hello-39"><a href="#hello-39"><span class="linenos">39</span></a>        <span class="n">name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
-</span><span id="hello-40"><a href="#hello-40"><span class="linenos">40</span></a>        <span class="n">sleep_for</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;sleep&#39;</span><span class="p">]</span>
-</span><span id="hello-41"><a href="#hello-41"><span class="linenos">41</span></a>        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Hello </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">name</span><span class="p">)</span>
-</span><span id="hello-42"><a href="#hello-42"><span class="linenos">42</span></a>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleep_for</span><span class="o">+</span><span class="mf">17.2</span><span class="p">)</span>
-</span><span id="hello-43"><a href="#hello-43"><span class="linenos">43</span></a>        <span class="n">manager</span><span class="o">.</span><span class="n">makePayment</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">getSender</span><span class="p">(),</span><span class="mi">1000</span><span class="p">,</span><span class="n">note</span><span class="o">=</span><span class="s2">&quot;pay back!&quot;</span><span class="p">)</span>
-</span><span id="hello-44"><a href="#hello-44"><span class="linenos">44</span></a>        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Bye </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-</span><span id="hello-45"><a href="#hello-45"><span class="linenos">45</span></a>    <span class="k">else</span><span class="p">:</span>
-</span><span id="hello-46"><a href="#hello-46"><span class="linenos">46</span></a>        <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;No data args&quot;</span><span class="p">)</span>
+    <a class="headerlink" href="#AnRequest"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="AnRequest-2"><a href="#AnRequest-2"><span class="linenos"> 2</span></a><span class="k">class</span> <span class="nc">AnRequest</span><span class="p">:</span>
+</span><span id="AnRequest-3"><a href="#AnRequest-3"><span class="linenos"> 3</span></a>    <span class="sd">&quot;&quot;&quot;Define a basic Algorand Note Request&quot;&quot;&quot;</span>
+</span><span id="AnRequest-4"><a href="#AnRequest-4"><span class="linenos"> 4</span></a>
+</span><span id="AnRequest-5"><a href="#AnRequest-5"><span class="linenos"> 5</span></a>    <span class="n">am</span> <span class="p">:</span> <span class="nb">object</span>
+</span><span id="AnRequest-6"><a href="#AnRequest-6"><span class="linenos"> 6</span></a>    <span class="sd">&quot;&quot;&quot;The  algonode.Manager object&quot;&quot;&quot;</span>
+</span><span id="AnRequest-7"><a href="#AnRequest-7"><span class="linenos"> 7</span></a>    <span class="n">txn</span> <span class="p">:</span><span class="nb">str</span>
+</span><span id="AnRequest-8"><a href="#AnRequest-8"><span class="linenos"> 8</span></a>    <span class="sd">&quot;&quot;&quot;Transacction id where the action was called&quot;&quot;&quot;</span>
+</span><span id="AnRequest-9"><a href="#AnRequest-9"><span class="linenos"> 9</span></a>    <span class="n">sender</span> <span class="p">:</span><span class="nb">str</span>
+</span><span id="AnRequest-10"><a href="#AnRequest-10"><span class="linenos">10</span></a>    <span class="sd">&quot;&quot;&quot;User who make the request to the oracle&quot;&quot;&quot;</span>
+</span><span id="AnRequest-11"><a href="#AnRequest-11"><span class="linenos">11</span></a>    <span class="n">body</span> <span class="p">:</span><span class="nb">dict</span>
+</span><span id="AnRequest-12"><a href="#AnRequest-12"><span class="linenos">12</span></a>    <span class="sd">&quot;&quot;&quot;Note Request content&quot;&quot;&quot;</span>
+</span><span id="AnRequest-13"><a href="#AnRequest-13"><span class="linenos">13</span></a>    <span class="c1"># TODO: rewrite documentation</span>
+</span><span id="AnRequest-14"><a href="#AnRequest-14"><span class="linenos">14</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">am</span><span class="p">,</span><span class="n">txn</span><span class="p">,</span><span class="n">sender</span><span class="p">,</span><span class="n">body</span><span class="p">):</span>
+</span><span id="AnRequest-15"><a href="#AnRequest-15"><span class="linenos">15</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">txn</span> <span class="o">=</span> <span class="n">txn</span>
+</span><span id="AnRequest-16"><a href="#AnRequest-16"><span class="linenos">16</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">sender</span> <span class="o">=</span> <span class="n">sender</span>
+</span><span id="AnRequest-17"><a href="#AnRequest-17"><span class="linenos">17</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">body</span> <span class="o">=</span> <span class="n">body</span>
+</span><span id="AnRequest-18"><a href="#AnRequest-18"><span class="linenos">18</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">am</span> <span class="o">=</span> <span class="n">am</span>
+</span><span id="AnRequest-19"><a href="#AnRequest-19"><span class="linenos">19</span></a>
+</span><span id="AnRequest-20"><a href="#AnRequest-20"><span class="linenos">20</span></a>    <span class="k">def</span> <span class="nf">getManager</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="AnRequest-21"><a href="#AnRequest-21"><span class="linenos">21</span></a>        <span class="sd">&quot;&quot;&quot;Return the node manager object, this enable to use algod and indexer clients into each action function&quot;&quot;&quot;</span>
+</span><span id="AnRequest-22"><a href="#AnRequest-22"><span class="linenos">22</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">am</span>
+</span><span id="AnRequest-23"><a href="#AnRequest-23"><span class="linenos">23</span></a>    <span class="k">def</span> <span class="nf">getTxn</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="AnRequest-24"><a href="#AnRequest-24"><span class="linenos">24</span></a>        <span class="sd">&quot;&quot;&quot;Return the transaction id&quot;&quot;&quot;</span>
+</span><span id="AnRequest-25"><a href="#AnRequest-25"><span class="linenos">25</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">txn</span>
+</span><span id="AnRequest-26"><a href="#AnRequest-26"><span class="linenos">26</span></a>
+</span><span id="AnRequest-27"><a href="#AnRequest-27"><span class="linenos">27</span></a>    <span class="k">def</span> <span class="nf">getSender</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="AnRequest-28"><a href="#AnRequest-28"><span class="linenos">28</span></a>        <span class="sd">&quot;&quot;&quot;Return the sender address&quot;&quot;&quot;</span>
+</span><span id="AnRequest-29"><a href="#AnRequest-29"><span class="linenos">29</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sender</span>
+</span><span id="AnRequest-30"><a href="#AnRequest-30"><span class="linenos">30</span></a>
+</span><span id="AnRequest-31"><a href="#AnRequest-31"><span class="linenos">31</span></a>    <span class="k">def</span> <span class="nf">getAppId</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="AnRequest-32"><a href="#AnRequest-32"><span class="linenos">32</span></a>        <span class="sd">&quot;&quot;&quot;Get the oracle app id&quot;&quot;&quot;</span>
+</span><span id="AnRequest-33"><a href="#AnRequest-33"><span class="linenos">33</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="s1">&#39;app&#39;</span><span class="p">]</span>
+</span><span id="AnRequest-34"><a href="#AnRequest-34"><span class="linenos">34</span></a>
+</span><span id="AnRequest-35"><a href="#AnRequest-35"><span class="linenos">35</span></a>    <span class="k">def</span> <span class="nf">getAction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="AnRequest-36"><a href="#AnRequest-36"><span class="linenos">36</span></a>        <span class="sd">&quot;&quot;&quot;Get the Action name for the request&quot;&quot;&quot;</span>
+</span><span id="AnRequest-37"><a href="#AnRequest-37"><span class="linenos">37</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="s1">&#39;action&#39;</span><span class="p">]</span>
+</span><span id="AnRequest-38"><a href="#AnRequest-38"><span class="linenos">38</span></a>
+</span><span id="AnRequest-39"><a href="#AnRequest-39"><span class="linenos">39</span></a>    <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="AnRequest-40"><a href="#AnRequest-40"><span class="linenos">40</span></a>        <span class="sd">&quot;&quot;&quot;Get the data passed to the function&quot;&quot;&quot;</span>
+</span><span id="AnRequest-41"><a href="#AnRequest-41"><span class="linenos">41</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
 </span></pre></div>
 
 
-            <div class="docstring"><p>Callback function for the action hello</p>
+            <div class="docstring"><p>Define a basic Algorand Note Request</p>
 </div>
 
 
-                </section>
-                <section id="add">
-                            <input id="add-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+                            <div id="AnRequest.__init__" class="classattr">
+                                        <input id="AnRequest.__init__-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
             
-        <span class="def">def</span>
-        <span class="name">add</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">r</span></span>)</span>
+        <span class="name">AnRequest</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">am</span>, </span><span class="param"><span class="n">txn</span>, </span><span class="param"><span class="n">sender</span>, </span><span class="param"><span class="n">body</span></span>)</span>
 
-                <label class="view-source-button" for="add-view-source"><span>View Source</span></label>
+                <label class="view-source-button" for="AnRequest.__init__-view-source"><span>View Source</span></label>
 
     </div>
-    <a class="headerlink" href="#add"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="add-49"><a href="#add-49"><span class="linenos">49</span></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
-</span><span id="add-50"><a href="#add-50"><span class="linenos">50</span></a>    <span class="s2">&quot;Callback function for the action add&quot;</span>
-</span><span id="add-51"><a href="#add-51"><span class="linenos">51</span></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">getData</span><span class="p">()</span>
-</span><span id="add-52"><a href="#add-52"><span class="linenos">52</span></a>    <span class="n">manager</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">getManager</span><span class="p">()</span>
-</span><span id="add-53"><a href="#add-53"><span class="linenos">53</span></a>    <span class="n">n1</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;n1&#39;</span><span class="p">]</span>
-</span><span id="add-54"><a href="#add-54"><span class="linenos">54</span></a>    <span class="n">n2</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;n2&#39;</span><span class="p">]</span>
-</span><span id="add-55"><a href="#add-55"><span class="linenos">55</span></a>    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Called add() | Return:</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="n">n2</span><span class="p">))</span>
+    <a class="headerlink" href="#AnRequest.__init__"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="AnRequest.__init__-14"><a href="#AnRequest.__init__-14"><span class="linenos">14</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">am</span><span class="p">,</span><span class="n">txn</span><span class="p">,</span><span class="n">sender</span><span class="p">,</span><span class="n">body</span><span class="p">):</span>
+</span><span id="AnRequest.__init__-15"><a href="#AnRequest.__init__-15"><span class="linenos">15</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">txn</span> <span class="o">=</span> <span class="n">txn</span>
+</span><span id="AnRequest.__init__-16"><a href="#AnRequest.__init__-16"><span class="linenos">16</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">sender</span> <span class="o">=</span> <span class="n">sender</span>
+</span><span id="AnRequest.__init__-17"><a href="#AnRequest.__init__-17"><span class="linenos">17</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">body</span> <span class="o">=</span> <span class="n">body</span>
+</span><span id="AnRequest.__init__-18"><a href="#AnRequest.__init__-18"><span class="linenos">18</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">am</span> <span class="o">=</span> <span class="n">am</span>
 </span></pre></div>
 
 
-            <div class="docstring"><p>Callback function for the action add</p>
+    
+
+                            </div>
+                            <div id="AnRequest.am" class="classattr">
+                                <div class="attr variable">
+            <span class="name">am</span><span class="annotation">: object</span>
+
+        
+    </div>
+    <a class="headerlink" href="#AnRequest.am"></a>
+    
+            <div class="docstring"><p>The  algonode.Manager object</p>
 </div>
 
 
+                            </div>
+                            <div id="AnRequest.txn" class="classattr">
+                                <div class="attr variable">
+            <span class="name">txn</span><span class="annotation">: str</span>
+
+        
+    </div>
+    <a class="headerlink" href="#AnRequest.txn"></a>
+    
+            <div class="docstring"><p>Transacction id where the action was called</p>
+</div>
+
+
+                            </div>
+                            <div id="AnRequest.sender" class="classattr">
+                                <div class="attr variable">
+            <span class="name">sender</span><span class="annotation">: str</span>
+
+        
+    </div>
+    <a class="headerlink" href="#AnRequest.sender"></a>
+    
+            <div class="docstring"><p>User who make the request to the oracle</p>
+</div>
+
+
+                            </div>
+                            <div id="AnRequest.body" class="classattr">
+                                <div class="attr variable">
+            <span class="name">body</span><span class="annotation">: dict</span>
+
+        
+    </div>
+    <a class="headerlink" href="#AnRequest.body"></a>
+    
+            <div class="docstring"><p>Note Request content</p>
+</div>
+
+
+                            </div>
+                            <div id="AnRequest.getManager" class="classattr">
+                                        <input id="AnRequest.getManager-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+<div class="attr function">
+            
+        <span class="def">def</span>
+        <span class="name">getManager</span><span class="signature pdoc-code condensed">(<span class="param"><span class="bp">self</span></span>)</span>
+
+                <label class="view-source-button" for="AnRequest.getManager-view-source"><span>View Source</span></label>
+
+    </div>
+    <a class="headerlink" href="#AnRequest.getManager"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="AnRequest.getManager-20"><a href="#AnRequest.getManager-20"><span class="linenos">20</span></a>    <span class="k">def</span> <span class="nf">getManager</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="AnRequest.getManager-21"><a href="#AnRequest.getManager-21"><span class="linenos">21</span></a>        <span class="sd">&quot;&quot;&quot;Return the node manager object, this enable to use algod and indexer clients into each action function&quot;&quot;&quot;</span>
+</span><span id="AnRequest.getManager-22"><a href="#AnRequest.getManager-22"><span class="linenos">22</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">am</span>
+</span></pre></div>
+
+
+            <div class="docstring"><p>Return the node manager object, this enable to use algod and indexer clients into each action function</p>
+</div>
+
+
+                            </div>
+                            <div id="AnRequest.getTxn" class="classattr">
+                                        <input id="AnRequest.getTxn-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+<div class="attr function">
+            
+        <span class="def">def</span>
+        <span class="name">getTxn</span><span class="signature pdoc-code condensed">(<span class="param"><span class="bp">self</span></span>)</span>
+
+                <label class="view-source-button" for="AnRequest.getTxn-view-source"><span>View Source</span></label>
+
+    </div>
+    <a class="headerlink" href="#AnRequest.getTxn"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="AnRequest.getTxn-23"><a href="#AnRequest.getTxn-23"><span class="linenos">23</span></a>    <span class="k">def</span> <span class="nf">getTxn</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="AnRequest.getTxn-24"><a href="#AnRequest.getTxn-24"><span class="linenos">24</span></a>        <span class="sd">&quot;&quot;&quot;Return the transaction id&quot;&quot;&quot;</span>
+</span><span id="AnRequest.getTxn-25"><a href="#AnRequest.getTxn-25"><span class="linenos">25</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">txn</span>
+</span></pre></div>
+
+
+            <div class="docstring"><p>Return the transaction id</p>
+</div>
+
+
+                            </div>
+                            <div id="AnRequest.getSender" class="classattr">
+                                        <input id="AnRequest.getSender-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+<div class="attr function">
+            
+        <span class="def">def</span>
+        <span class="name">getSender</span><span class="signature pdoc-code condensed">(<span class="param"><span class="bp">self</span></span>)</span>
+
+                <label class="view-source-button" for="AnRequest.getSender-view-source"><span>View Source</span></label>
+
+    </div>
+    <a class="headerlink" href="#AnRequest.getSender"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="AnRequest.getSender-27"><a href="#AnRequest.getSender-27"><span class="linenos">27</span></a>    <span class="k">def</span> <span class="nf">getSender</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="AnRequest.getSender-28"><a href="#AnRequest.getSender-28"><span class="linenos">28</span></a>        <span class="sd">&quot;&quot;&quot;Return the sender address&quot;&quot;&quot;</span>
+</span><span id="AnRequest.getSender-29"><a href="#AnRequest.getSender-29"><span class="linenos">29</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sender</span>
+</span></pre></div>
+
+
+            <div class="docstring"><p>Return the sender address</p>
+</div>
+
+
+                            </div>
+                            <div id="AnRequest.getAppId" class="classattr">
+                                        <input id="AnRequest.getAppId-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+<div class="attr function">
+            
+        <span class="def">def</span>
+        <span class="name">getAppId</span><span class="signature pdoc-code condensed">(<span class="param"><span class="bp">self</span></span>)</span>
+
+                <label class="view-source-button" for="AnRequest.getAppId-view-source"><span>View Source</span></label>
+
+    </div>
+    <a class="headerlink" href="#AnRequest.getAppId"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="AnRequest.getAppId-31"><a href="#AnRequest.getAppId-31"><span class="linenos">31</span></a>    <span class="k">def</span> <span class="nf">getAppId</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="AnRequest.getAppId-32"><a href="#AnRequest.getAppId-32"><span class="linenos">32</span></a>        <span class="sd">&quot;&quot;&quot;Get the oracle app id&quot;&quot;&quot;</span>
+</span><span id="AnRequest.getAppId-33"><a href="#AnRequest.getAppId-33"><span class="linenos">33</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="s1">&#39;app&#39;</span><span class="p">]</span>
+</span></pre></div>
+
+
+            <div class="docstring"><p>Get the oracle app id</p>
+</div>
+
+
+                            </div>
+                            <div id="AnRequest.getAction" class="classattr">
+                                        <input id="AnRequest.getAction-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+<div class="attr function">
+            
+        <span class="def">def</span>
+        <span class="name">getAction</span><span class="signature pdoc-code condensed">(<span class="param"><span class="bp">self</span></span>)</span>
+
+                <label class="view-source-button" for="AnRequest.getAction-view-source"><span>View Source</span></label>
+
+    </div>
+    <a class="headerlink" href="#AnRequest.getAction"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="AnRequest.getAction-35"><a href="#AnRequest.getAction-35"><span class="linenos">35</span></a>    <span class="k">def</span> <span class="nf">getAction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="AnRequest.getAction-36"><a href="#AnRequest.getAction-36"><span class="linenos">36</span></a>        <span class="sd">&quot;&quot;&quot;Get the Action name for the request&quot;&quot;&quot;</span>
+</span><span id="AnRequest.getAction-37"><a href="#AnRequest.getAction-37"><span class="linenos">37</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="s1">&#39;action&#39;</span><span class="p">]</span>
+</span></pre></div>
+
+
+            <div class="docstring"><p>Get the Action name for the request</p>
+</div>
+
+
+                            </div>
+                            <div id="AnRequest.getData" class="classattr">
+                                        <input id="AnRequest.getData-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+<div class="attr function">
+            
+        <span class="def">def</span>
+        <span class="name">getData</span><span class="signature pdoc-code condensed">(<span class="param"><span class="bp">self</span></span>)</span>
+
+                <label class="view-source-button" for="AnRequest.getData-view-source"><span>View Source</span></label>
+
+    </div>
+    <a class="headerlink" href="#AnRequest.getData"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="AnRequest.getData-39"><a href="#AnRequest.getData-39"><span class="linenos">39</span></a>    <span class="k">def</span> <span class="nf">getData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="AnRequest.getData-40"><a href="#AnRequest.getData-40"><span class="linenos">40</span></a>        <span class="sd">&quot;&quot;&quot;Get the data passed to the function&quot;&quot;&quot;</span>
+</span><span id="AnRequest.getData-41"><a href="#AnRequest.getData-41"><span class="linenos">41</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+</span></pre></div>
+
+
+            <div class="docstring"><p>Get the data passed to the function</p>
+</div>
+
+
+                            </div>
                 </section>
     </main>
 <script>
@@ -320,7 +453,7 @@ and execute <code><a href="#hello">hello()</a></code> and <code><a href="#add">a
                 script.async = true;
                 script.onload = () => resolve(window.pdocSearch);
                 script.onerror = (e) => reject(e);
-                script.src = "search.js";
+                script.src = "../search.js";
                 document.getElementsByTagName("head")[0].appendChild(script);
             });
         } catch (e) {
@@ -362,7 +495,7 @@ and execute <code><a href="#hello">hello()</a></code> and <code><a href="#add">a
             }
             for (let result of results.slice(0, 10)) {
                 let doc = result.doc;
-                let url = `${doc.modulename.replaceAll(".", "/")}.html`;
+                let url = `../${doc.modulename.replaceAll(".", "/")}.html`;
                 if (doc.qualname) {
                     url += `#${doc.qualname}`;
                 }

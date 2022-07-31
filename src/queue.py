@@ -14,24 +14,29 @@ class Q:
 
 
     def call(self):
+        """Call the action in queue."""
         t = threading.Thread(target = self.invoke, args=(self.r,))
         t.start()
 
+# This class must use inheret threading.
 class Queue:
-    threads : int
-    """Max action running at the same time."""
     actions : dict
     """Pre-defined function based key-index dictionary"""
-    def __init__(self,actions,threads = 1):
+    am: object
+    """Algo Node Manager"""
+    threads : int
+    """Max action running at the same time."""
+
+    def __init__(self,actions,am,threads = 1):
         """Create a FIFO actions request manager."""
         self.threads = threads  # Max actions running at the same time.
         self.actions = actions
+        self.am = am
         self.que = deque()
 
 
     def enqueue(self,request):
         """Add action ready to be callable."""
-
         action_exe = self.actions.get(request.getAction())
         if(action_exe != None):
             logging.info('Sender: %s call: %s',request.getSender(),request.getAction())
